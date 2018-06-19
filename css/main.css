@@ -1,0 +1,211 @@
+/* #content > div * {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  font-size: 15px;
+  font-family: sans-serif;
+  color: darkblue;
+
+} */
+
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #3638c3;
+  height: 100vh;
+}
+
+/* cross btn */
+
+.cross-btn {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+}
+.cross-btn span::before,
+.cross-btn span::after,
+.cross-btn span {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: black;
+  top: 50%; margin-top: -1px;
+  left: 50%; margin-left: -10px;
+}
+
+.cross-btn span::before,
+.cross-btn span::after {
+  content: '';
+  display: block;
+  transition: 0.5s;
+}
+
+
+
+.cross-btn span::before {
+  transform: translateY(-6px);
+}
+.cross-btn span::after {
+  transform: translateY(6px);
+}
+
+.cross-btn_active span:before {
+  transform: rotate(40deg);
+}
+.cross-btn_active span:after {
+  transform: rotate(-40deg);
+}
+
+.cross-btn_active span {
+  height: 0;
+}
+
+
+/* arrow - btn*/
+
+.arrow-btn {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+}
+.arrow-btn span::before,
+.arrow-btn span::after,
+.arrow-btn span {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: black;
+  top: 50%; margin-top: -1px;
+  left: 50%; margin-left: -10px;
+}
+
+.arrow-btn span::before,
+.arrow-btn span::after {
+  content: '';
+  display: block;
+  transition: 0.5s;
+}
+
+/* arrow animation */
+
+.arrow-btn span::before {
+  transform: translateY(-6px);
+}
+.arrow-btn span::after {
+  transform: translateY(6px);
+}
+
+.arrow-btn_active span:before {
+  transform: rotate(-35deg);
+  transform-origin: left bottom;
+  width: 10px;
+}
+.arrow-btn_active span:after {
+  transform: rotate(35deg);
+  transform-origin: left top;
+  width: 10px;
+}
+
+/* Menu  */
+
+.menu-btn {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+}
+.menu-btn span::before,
+.menu-btn span::after,
+.menu-btn span {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: black;
+  top: 50%; margin-top: -1px;
+  left: 50%; margin-left: -10px;
+}
+
+.menu-btn span::before,
+.menu-btn span::after {
+  content: '';
+  display: block;
+  transition: 0.5s;
+}
+
+
+
+.menu-btn span::before {
+  transform: translateY(-6px);
+}
+.menu-btn span::after {
+  transform: translateY(6px);
+}
+
+.menu-btn_active span:before {
+  transform: rotate(40deg);
+}
+.menu-btn_active span:after {
+  transform: rotate(-40deg);
+}
+
+.menu-btn_active span {
+  height: 0;
+}
+
+.menu-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 0 50px 50px 0;
+}
+
+.menu-nav {
+  background: #fff;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: -25px;
+  border-radius: 50px 0 0 50px;
+}
+
+.menu-nav__link {
+  display: inline-block;
+  text-decoration: none;
+  color: #222;
+  margin-right: 20px;
+}
+
+.menu-nav {
+  transition: 0.7s;
+  transform-origin: right center;
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.menu-nav_active {
+  transform: translateX(0%);
+  opacity: 1;
+}
