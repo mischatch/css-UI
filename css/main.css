@@ -20,12 +20,12 @@ body {
   margin: 0;
 }
 
-.content {
+.content1 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   background: #3638c3;
-  height: 100vh;
+  height: 300px;
 }
 
 /* cross btn */
@@ -208,4 +208,56 @@ body {
 .menu-nav_active {
   transform: translateX(0%);
   opacity: 1;
+}
+
+/*__________ content2 ___________  */
+
+.content2 {
+  height: 500px;
+  background-color: #ff5e89;
+  position: relative;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.mobile, .tablet, .desktop {
+  position: absolute;
+  bottom: 0;
+  box-shadow: -3px 5px 20px 0px #674d54b5;
+  transform: rotateY(15deg);
+  transition: 0.5s;
+  transform: translateY(100%);
+}
+
+.mobile {
+  width: 260px;
+  height: 200px;
+  background: #fff;
+  left: 15%;
+  z-index: 3;
+  transition-delay: 0.2s;
+}
+
+.tablet {
+  width: 320px;
+  height: 260px;
+  background: #fff;
+  left: 20%;
+  z-index: 2;
+  transition-delay: 0.4s;
+}
+
+.desktop {
+  width: 380px;
+  height: 320px;
+  background: #fff;
+  left: 25%;
+  z-index: 1;
+  transition-delay: 0.6s;
+}
+
+.content2:hover .mobile,
+.content2:hover .tablet,
+.content2:hover .desktop {
+  transform: translateY(12px) rotateY(18deg) rotateX(7deg);
 }
