@@ -18,4 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.menu-nav').toggleClass('menu-nav_active');
   });
 
+  $('.image').hover(function(e){
+    e.preventDefault();
+    $(this).toggleClass('image_active');
+  });
+
 });
