@@ -266,17 +266,22 @@ body {
 /* body { margin: 0; } */
 
 .content3 {
-  height: 600px;
+  height: 550px;
+  background-color: #4e4ec5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .images-container {
-  background-color: #4e4ec5;
-  height: 80vh;
+  height: 500px;
+  width: 100%;
 /*   margin: ; */
   display: flex;
   align-items: center;
   justify-content: center;
   perspective: 1800px;
+  overflow: hidden;
 }
 
 .image {
@@ -300,4 +305,17 @@ body {
   margin-right: -30px;
   transform: rotateY(25deg);
   color: #ffecf0;
+}
+
+.content4 {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff5e89;
+}
+
+.svg-animation {
+  height: 300px;
+  width: 300px;
 }
